@@ -5,17 +5,18 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -65,6 +66,30 @@ public class BadIOGUI {
                 }
             }
         });
+        //Point 01.01
+        final JPanel panel1 = new JPanel();
+        panel1.setLayout(new BoxLayout(panel1, BoxLayout.X_AXIS));
+        canvas.add(panel1, BorderLayout.CENTER);
+        panel1.add(write);
+        //point 01.02
+        final JButton read = new JButton("read on file");
+        panel1.add(read);
+        read.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                try (final BufferedReader r = new BufferedReader(new FileReader(PATH, StandardCharsets.UTF_8))) {
+                    String line = null;
+                    while ((line = r.readLine()) != null){
+                        System.out.println(line);
+                    }
+                } catch (IOException e) {
+                    JOptionPane.showMessageDialog(frame, e, "Error", JOptionPane.ERROR_MESSAGE);
+                    e.printStackTrace();
+                }              
+            }
+
+        });
     }
 
     private void display() {
@@ -80,6 +105,7 @@ public class BadIOGUI {
         final int sw = (int) screen.getWidth();
         final int sh = (int) screen.getHeight();
         frame.setSize(sw / PROPORTION, sh / PROPORTION);
+        frame.pack();
         /*
          * Instead of appearing at (0,0), upper left corner of the screen, this
          * flag makes the OS window manager take care of the default positioning

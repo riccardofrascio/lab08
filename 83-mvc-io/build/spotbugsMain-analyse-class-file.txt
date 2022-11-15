@@ -1,0 +1,5 @@
+/home/riccardo/Desktop/oop/java/lab08/83-mvc-io/build/classes/java/main/it/unibo/mvc/SimpleGUI$2.class
+/home/riccardo/Desktop/oop/java/lab08/83-mvc-io/build/classes/java/main/it/unibo/mvc/Controller.class
+/home/riccardo/Desktop/oop/java/lab08/83-mvc-io/build/classes/java/main/it/unibo/mvc/SimpleGUI$1.class
+/home/riccardo/Desktop/oop/java/lab08/83-mvc-io/build/classes/java/main/it/unibo/mvc/SimpleController.class
+/home/riccardo/Desktop/oop/java/lab08/83-mvc-io/build/classes/java/main/it/unibo/mvc/SimpleGUI.class

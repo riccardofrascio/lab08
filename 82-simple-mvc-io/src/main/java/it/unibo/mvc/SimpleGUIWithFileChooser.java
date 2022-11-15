@@ -18,16 +18,22 @@ import java.awt.event.ActionListener;
  * 
  */
 public final class SimpleGUIWithFileChooser {
-    
+
     private final String SAVE = "SAVE";
     private final String BROWSE = "BROWSE";
     private final JFrame frame = new JFrame();
 
+    /**
+    * A simple GUI that save in a file 
+    *  Default file is output.txt in user directory
+    *  You can choose the file by the button browse
+    * 
+    */
     public SimpleGUIWithFileChooser(final Controller controller) {
         final JPanel panel1 = new JPanel();
         panel1.setLayout(new BorderLayout());
         final JTextArea textArea1 = new JTextArea();
-        panel1.add(textArea1);
+        panel1.add(textArea1, BorderLayout.CENTER);
         final JButton save = new JButton(SAVE);
         panel1.add(save, BorderLayout.SOUTH);
         save.addActionListener(new ActionListener() {
@@ -40,6 +46,7 @@ public final class SimpleGUIWithFileChooser {
                     JOptionPane.showMessageDialog(null, e.getMessage(), "An error occurred", JOptionPane.ERROR_MESSAGE);
                 }
             }
+        
         });
 
         final JPanel panel2 = new JPanel();
@@ -50,21 +57,23 @@ public final class SimpleGUIWithFileChooser {
         browse.addActionListener(new ActionListener(){
 
             @Override
-            public void actionPerformed(ActionEvent arg0) {
+            public void actionPerformed(final ActionEvent arg0) {
                 JFileChooser chooser = new JFileChooser();
                 chooser.setSelectedFile(controller.getCourrentfile());
                 final int result = chooser.showSaveDialog(frame);
+                
                 if(result == JFileChooser.APPROVE_OPTION) {
                     controller.setCourrentfile(chooser.getSelectedFile());
                     textArea2.setText(controller.getCourrentPath());
                 } 
+                
                 if(result != JFileChooser.APPROVE_OPTION && result != JFileChooser.CANCEL_OPTION) {
                     JOptionPane.showMessageDialog(frame, result, "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });
-        panel2.add(textArea2, BorderLayout.WEST);
-        panel2.add(browse, BorderLayout.EAST);
+        panel2.add(textArea2, BorderLayout.CENTER);
+        panel2.add(browse, BorderLayout.LINE_END);
         panel1.add(panel2, BorderLayout.NORTH);
 
         // Frame size and location
@@ -77,6 +86,10 @@ public final class SimpleGUIWithFileChooser {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    /**
+    * used to set the JFrame visibile 
+    * 
+    */
     private void display() {
         frame.setVisible(true);
     }

@@ -21,6 +21,11 @@ public final class SimpleGUI {
     private final String TITLE = "My first graphical interface";
     private final JFrame frame = new JFrame(TITLE);
 
+    /**
+    * A simple GUI that save in a file 
+    *  Default file is output.txt in user directory
+    * 
+    */
     public SimpleGUI(final Controller controller) {
         final JPanel panel1 = new JPanel();
         panel1.setLayout(new BorderLayout());
@@ -51,6 +56,10 @@ public final class SimpleGUI {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
+    /**
+    * used to set the JFrame visibile 
+    * 
+    */
     private void display() {
         frame.setVisible(true);
     }

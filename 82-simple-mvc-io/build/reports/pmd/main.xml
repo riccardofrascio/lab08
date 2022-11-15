@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.51.0" timestamp="2022-11-15T10:49:36.239">
+<file name="/home/riccardo/Desktop/oop/java/lab08/82-simple-mvc-io/src/main/java/it/unibo/mvc/SimpleGUI.java">
+<violation beginline="21" endline="21" begincolumn="26" endcolumn="30" rule="FieldNamingConventions" ruleset="Code Style" package="it.unibo.mvc" class="SimpleGUI" variable="TITLE" externalInfoUrl="https://pmd.github.io/pmd-6.51.0/pmd_rules_java_codestyle.html#fieldnamingconventions" priority="1">
+The final field name 'TITLE' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="21" endline="21" begincolumn="26" endcolumn="30" rule="FinalFieldCouldBeStatic" ruleset="Design" package="it.unibo.mvc" class="SimpleGUI" variable="TITLE" externalInfoUrl="https://pmd.github.io/pmd-6.51.0/pmd_rules_java_design.html#finalfieldcouldbestatic" priority="3">
+This final field could be made static
+</violation>
+</file>
+<file name="/home/riccardo/Desktop/oop/java/lab08/82-simple-mvc-io/src/main/java/it/unibo/mvc/SimpleGUIWithFileChooser.java">
+<violation beginline="22" endline="22" begincolumn="26" endcolumn="29" rule="FieldNamingConventions" ruleset="Code Style" package="it.unibo.mvc" class="SimpleGUIWithFileChooser" variable="SAVE" externalInfoUrl="https://pmd.github.io/pmd-6.51.0/pmd_rules_java_codestyle.html#fieldnamingconventions" priority="1">
+The final field name 'SAVE' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="22" endline="22" begincolumn="26" endcolumn="29" rule="FinalFieldCouldBeStatic" ruleset="Design" package="it.unibo.mvc" class="SimpleGUIWithFileChooser" variable="SAVE" externalInfoUrl="https://pmd.github.io/pmd-6.51.0/pmd_rules_java_design.html#finalfieldcouldbestatic" priority="3">
+This final field could be made static
+</violation>
+<violation beginline="23" endline="23" begincolumn="26" endcolumn="31" rule="FieldNamingConventions" ruleset="Code Style" package="it.unibo.mvc" class="SimpleGUIWithFileChooser" variable="BROWSE" externalInfoUrl="https://pmd.github.io/pmd-6.51.0/pmd_rules_java_codestyle.html#fieldnamingconventions" priority="1">
+The final field name 'BROWSE' doesn't match '[a-z][a-zA-Z0-9]*'
+</violation>
+<violation beginline="23" endline="23" begincolumn="26" endcolumn="31" rule="FinalFieldCouldBeStatic" ruleset="Design" package="it.unibo.mvc" class="SimpleGUIWithFileChooser" variable="BROWSE" externalInfoUrl="https://pmd.github.io/pmd-6.51.0/pmd_rules_java_design.html#finalfieldcouldbestatic" priority="3">
+This final field could be made static
+</violation>
+<violation beginline="61" endline="61" begincolumn="17" endcolumn="57" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="it.unibo.mvc" class="SimpleGUIWithFileChooser" method="actionPerformed" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.51.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'chooser' could be declared final
+</violation>
+</file>
+</pmd>

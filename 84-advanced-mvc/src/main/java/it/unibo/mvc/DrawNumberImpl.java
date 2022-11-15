@@ -23,6 +23,15 @@ public final class DrawNumberImpl implements DrawNumber {
         this.attempts = attempts;
         this.reset();
     }
+    /**
+     * 
+     * @param conf configuration where get max, min and attempts
+     */
+    public DrawNumberImpl(Configuration conf) {
+        this.max=conf.getMax();
+        this.min=conf.getMin();
+        this.attempts=conf.getAttempts();
+    }
 
     @Override
     public void reset() {

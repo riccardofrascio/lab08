@@ -74,19 +74,19 @@ public class BadIOGUI {
         //point 01.02
         final JButton read = new JButton("read on file");
         panel1.add(read);
-        read.addActionListener(new ActionListener(){
+        read.addActionListener(new ActionListener() {
 
             @Override
-            public void actionPerformed(ActionEvent arg0) {
-                try (final BufferedReader r = new BufferedReader(new FileReader(PATH, StandardCharsets.UTF_8))) {
+            public void actionPerformed(final ActionEvent arg0) {
+                try (BufferedReader r = new BufferedReader(new FileReader(PATH, StandardCharsets.UTF_8))) {
                     String line = null;
-                    while ((line = r.readLine()) != null){
+                    while ((line = r.readLine()) != null) {
                         System.out.println(line);
                     }
                 } catch (IOException e) {
                     JOptionPane.showMessageDialog(frame, e, "Error", JOptionPane.ERROR_MESSAGE);
                     e.printStackTrace();
-                }              
+                }
             }
 
         });
